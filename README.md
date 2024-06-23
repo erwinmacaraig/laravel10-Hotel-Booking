@@ -26,4 +26,10 @@ and then
 chown -R laravel:laravel /var/www/html
 ```
 
+### When changing the database, remember to login to the PHP container and execute:
+```
+php artisan session:table
+php artisan migrate
+```
+
 This repo is based on [this link](https://vshloda.medium.com/setting-up-a-laravel-10-development-environment-with-docker-3977a292c8dd) and this [repo](https://github.com/vshloda/docker-laravel)
